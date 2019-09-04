@@ -1,0 +1,4 @@
+### To Me 
+
+Ne pas oublier de mettre le bon password avant de builder l'App dans le fichier : android/key.properties
+La keystore doit également être présente au chemin spécifié
