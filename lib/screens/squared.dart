@@ -53,7 +53,8 @@ class _SquaredState extends State<Squared> with SingleTickerProviderStateMixin {
   Widget build(BuildContext context) {
     // Screen Size
     screenX = MediaQuery.of(context).size.width;
-    screenY = MediaQuery.of(context).size.height - (bottomBarHeight + topBarHeight);
+    screenY =
+        MediaQuery.of(context).size.height - (bottomBarHeight + topBarHeight);
 
     // To center the square
     if (posX == 0.0) {
@@ -96,10 +97,18 @@ class _SquaredState extends State<Squared> with SingleTickerProviderStateMixin {
             debugPrint("posY : " + posY.toString());
             if (posY < 0.0) {
               posY = 0.0;
-            } 
+            }
             // I absolutly don't know why I have to add so much stuff to calculate the right position a the bottom of the screen... (because of the black back on Android phone - the one with the round, triangle and square??)
-            else if ((posY + boxSize + bottomBarHeight + topBarHeight + setttingBarHeight) > (screenY - (bottomBarHeight + topBarHeight))) {
-              posY = screenY - boxSize - (bottomBarHeight + topBarHeight)*2 - setttingBarHeight;
+            else if ((posY +
+                    boxSize +
+                    bottomBarHeight +
+                    topBarHeight +
+                    setttingBarHeight) >
+                (screenY - (bottomBarHeight + topBarHeight))) {
+              posY = screenY -
+                  boxSize -
+                  (bottomBarHeight + topBarHeight) * 2 -
+                  setttingBarHeight;
             }
           });
         },
@@ -110,7 +119,7 @@ class _SquaredState extends State<Squared> with SingleTickerProviderStateMixin {
             if (posX < 0.1) {
               posX = 0.1;
             } else if (posX + boxSize > screenX) {
-              posX = screenX - boxSize;//screenY - boxSize - bottomBarHeight;
+              posX = screenX - boxSize; //screenY - boxSize - bottomBarHeight;
             }
           });
         },
@@ -121,9 +130,14 @@ class _SquaredState extends State<Squared> with SingleTickerProviderStateMixin {
               left: posX,
               top: posY,
               child: Container(
+                alignment: AlignmentDirectional.center,
                 width: boxSize,
                 height: boxSize,
                 decoration: BoxDecoration(color: Colors.red),
+                child: Text(
+                  'Move me!',
+                  style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
           ],

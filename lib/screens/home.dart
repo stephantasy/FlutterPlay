@@ -4,6 +4,7 @@ import 'package:hello_flutter/screens/default.dart';
 import 'package:hello_flutter/screens/shared/navigationButton.dart';
 import 'package:hello_flutter/screens/squared.dart';
 import 'package:hello_flutter/screens/todo.dart';
+import 'download_image.dart';
 import 'fuel_consumption.dart';
 import 'your_name.dart';
 
@@ -68,6 +69,10 @@ class Home extends StatelessWidget {
                           color: Colors.red[700],
                           textColor: Colors.white),
                     ],
+                  ),
+                  ChangePageGenericButton(
+                    title: "DI",
+                    pageToCall: DownloadImage(),
                   ),
                 ],
               ),

@@ -84,6 +84,10 @@ class _DetailPageState extends State<DetailPage> {
     String imgPath =
         "https://www.philharmonie.lu/media/content/mutimediafiles/saison_19-20/PHIL27_Photos/Valery_Gergiev-36-photo_Alberto_Venzago-375x240.jpg";
     return Image.network(imgPath, fit: BoxFit.cover, width: 1000.0);
+    
+    
+    // Image image = await ImageDownloader.downloadImage(imgPath);
+    // return image;
   }
 
   Widget date(double size) {

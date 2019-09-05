@@ -21,8 +21,15 @@ class _DefaultState extends State<Default> {
         children: <Widget>[
           Text("Hello there!"),
           GoBackHome(),
+          testImage(),
         ],
       ),
+    );
+  }
+  
+    Widget testImage() {
+    return Image.network(
+      'https://picsum.photos/250?image=9',
     );
   }
 }

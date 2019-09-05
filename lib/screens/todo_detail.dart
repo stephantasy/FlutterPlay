@@ -165,7 +165,7 @@ class TodoDetailState extends State {
           borderRadius: BorderRadius.circular(5.0),
         ),
       ),
-      keyboardType: TextInputType.number,
+      //keyboardType: TextInputType.number,
     );
   }
 
