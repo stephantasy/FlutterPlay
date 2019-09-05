@@ -22,7 +22,9 @@ class _SquaredState extends State<Squared> with SingleTickerProviderStateMixin {
   double screenY = 0.0;
   double screenX = 0.0;
   double boxSize = 10.0;
+  double fontSize = 0.0;
   final double fullBoxSze = 150.0;
+  final double fullfontSize = 28.0;
 
   @override
   void initState() {
@@ -42,6 +44,7 @@ class _SquaredState extends State<Squared> with SingleTickerProviderStateMixin {
     animation.addListener(() {
       setState(() {
         boxSize = fullBoxSze * animation.value; // animation.value = From 0 to 1
+        fontSize = fullfontSize * animation.value;
       });
       center(context);
     });
@@ -136,7 +139,7 @@ class _SquaredState extends State<Squared> with SingleTickerProviderStateMixin {
                 decoration: BoxDecoration(color: Colors.red),
                 child: Text(
                   'Move me!',
-                  style: TextStyle(fontSize: 28.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: fontSize, fontWeight: FontWeight.bold),
                 ),
               ),
             ),
