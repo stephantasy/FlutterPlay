@@ -157,6 +157,7 @@ class _CarouselState extends State<Carousel> {
   @override
   Widget build(BuildContext context) {
     // Stuff to fade background image while moving the carousel
+    // Note: the "_visible" has to change for the animation to be executed
     _visible = !_visible;
     int val1, val2 = 0;
     String imgStr1, imgStr2;
