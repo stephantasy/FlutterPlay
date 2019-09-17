@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hello_flutter/screens/animation_page.dart';
 import 'package:hello_flutter/screens/carousel.dart';
 import 'package:hello_flutter/screens/default.dart';
 import 'package:hello_flutter/screens/shared/navigationButton.dart';
@@ -70,9 +71,19 @@ class Home extends StatelessWidget {
                           textColor: Colors.white),
                     ],
                   ),
-                  ChangePageGenericButton(
-                    title: "DI",
-                    pageToCall: DownloadImage(),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      ChangePageGenericButton(
+                        title: "DI",
+                        pageToCall: DownloadImage(),
+                      ),
+                      Container(width: 25.0),
+                      ChangePageGenericButton(
+                        title: "Animations",
+                        pageToCall: AnimationPage(),
+                      ),
+                    ],
                   ),
                 ],
               ),
