@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(top: 20.0, left: 10.0),
+              padding: EdgeInsets.only(top: 0.0, left: 10.0),
               child: Column(
                 children: <Widget>[
                   theRow1(),
@@ -120,7 +120,7 @@ class Home extends StatelessWidget {
       hdyd,
       textDirection: TextDirection.ltr,
       style: TextStyle(
-        fontSize: 28.0,
+        fontSize: 24.0,
         color: Colors.white,
         decoration: TextDecoration.none,
         fontFamily: 'Oxygen',
@@ -135,7 +135,7 @@ class Home extends StatelessWidget {
       hello,
       textDirection: TextDirection.ltr,
       style: TextStyle(
-        fontSize: 36.0,
+        fontSize: 28.0,
         color: Colors.white,
         decoration: TextDecoration.none,
         fontFamily: 'Oxygen',
@@ -150,7 +150,7 @@ class Home extends StatelessWidget {
       hello,
       textDirection: TextDirection.ltr,
       style: TextStyle(
-        fontSize: 36.0,
+        fontSize: 28.0,
         color: Colors.white,
         decoration: TextDecoration.none,
         fontFamily: 'Oxygen',
@@ -165,7 +165,7 @@ class Home extends StatelessWidget {
       hello,
       textDirection: TextDirection.ltr,
       style: TextStyle(
-        fontSize: 28.0,
+        fontSize: 24.0,
         color: Colors.white,
         decoration: TextDecoration.none,
         fontFamily: 'Oxygen',
@@ -364,7 +364,7 @@ class FishImageWidget extends StatelessWidget {
     Image image = Image(
       image: fish,
       width: 200.0,
-      height: 150.0,
+      height: 120.0,
     );
     return Container(
       child: image,
